@@ -1,0 +1,142 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #f9fbfc;
+  height: 72px;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-gradient {
+  background: linear-gradient(to right, #008eb5, #05bff3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-dark {
+  color: #1e293b;
+}
+
+/* Search + Bell Icon Section */
+.header-center {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 48px;
+  gap: 16px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  padding: 8px 16px;
+  width: 640px;
+  max-width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.header-search-icon {
+  color: #656d7d;
+  margin-right: 8px;
+}
+
+.header-search-text {
+  color: #656d7d;
+  font-size: 18px;
+}
+
+/* Shared Icon Style */
+.header-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Right Section: Avatar + Add */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.header-avatar-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #4940f7;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.purple {
+  background-color: #4940f7;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 16px;
+    height: 60px;
+    position: relative; /* Ensure hamburger menu can position relative to header */
+  }
+
+  .header-logo {
+    font-size: 20px;
+  }
+
+  .header-center {
+    margin-left: 40px; /* Leave space for hamburger menu */
+    gap: 8px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .header-search {
+    width: 40px; /* Compact search bar to icon-only */
+    padding: 6px;
+    justify-content: center;
+  }
+
+  .header-search-text {
+    display: none; /* Hide text on mobile */
+  }
+
+  .header-search-icon {
+    margin-right: 0;
+  }
+
+  .header-icon-box,
+  .header-avatar-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-right {
+    gap: 8px;
+    margin-left: 8px;
+  }
+}

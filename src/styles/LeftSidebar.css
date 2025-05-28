@@ -1,0 +1,150 @@
+/* Sidebar container */
+.sidebar {
+  width: 220px;
+  background-color: #f6faff;
+  height: calc(100vh - 60px);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Sidebar content wrapper */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section titles in the sidebar */
+.sidebar-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  text-transform: uppercase;
+}
+
+/* Extra spacing for the tools section */
+.tools-title {
+  margin-top: 48px;
+}
+
+/* Navigation links container */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Footer spacing */
+.sidebar-footer {
+  margin-top: 96px;
+}
+
+/* Individual navigation item */
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover effect for nav items */
+.sidebar-nav-item:hover {
+  background-color: #e0ecf9;
+}
+
+/* Active state for nav items */
+.sidebar-nav-item.active {
+  background-color: #e0ecf9;
+}
+
+/* Icon styling in nav items */
+.sidebar-icon {
+  margin-right: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Active state icon color */
+.sidebar-nav-item.active .sidebar-icon {
+  color: #2563eb;
+}
+
+/* Label text for nav items */
+.sidebar-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Hamburger menu button */
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hamburger menu stays on left */
+  .hamburger-menu {
+    display: block;
+    position: fixed; /* fixed so it stays visible */
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+  }
+
+  /* Sidebar positioning on mobile - moved iy to right */
+  .sidebar {
+    width: 220px;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    right: -220px;  /* offscreen right */
+    transition: right 0.3s ease;
+    z-index: 1050;
+    background-color: #f6faff;
+  }
+
+  /* Sidebar open state - slide in from right */
+  .sidebar.open {
+    right: 0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* shadow on left side */
+  }
+
+  /* Sidebar content fit */
+  .sidebar-content {
+    min-height: auto;
+  }
+
+  /* Adjust tools section spacing on mobile */
+  .tools-title {
+    margin-top: 72px;
+  }
+
+  /* Footer spacing on mobile */
+  .sidebar-footer {
+    margin-top: 96px;
+  }
+
+  /* Backdrop when sidebar is open */
+  .sidebar[data-open="true"]::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1040;
+  }
+}

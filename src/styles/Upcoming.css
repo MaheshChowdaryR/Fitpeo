@@ -1,0 +1,79 @@
+/* Main container for the Upcoming Schedule section */
+.upcoming-schedule {
+  padding: 24px; 
+}
+
+/* Heading for the section */
+.upcoming-schedule h3 {
+  font-size: 20px; 
+  font-weight: 600;
+  color: #1f2937; 
+  margin-bottom: 20px;
+}
+
+/* Container for each day's schedule */
+.day-schedule {
+  margin-bottom: 32px; 
+}
+
+/* Day title (e.g., Monday, Today, etc.) */
+.day-title {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Row layout for appointments */
+.appointments-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+/* Individual appointment card */
+.appointment-item {
+  background: rgba(128, 136, 227, 0.15); /* Slightly softer tone */
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); /* Subtle card shadow */
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect to add interactivity */
+.appointment-item:hover {
+  transform: scale(1.02);
+}
+
+/* Text block inside each appointment card */
+.appointment-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Appointment title text */
+.appt-title {
+  font-size: 15px; /* Larger for legibility */
+  font-weight: 500;
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Appointment time text */
+.appt-time {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Emoji icon for appointment type */
+.emoji {
+  font-size: 24px; 
+  margin-left: auto; 
+}

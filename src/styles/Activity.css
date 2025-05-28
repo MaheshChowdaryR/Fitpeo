@@ -1,0 +1,68 @@
+/* Container for the entire activity feed section */
+.activity-feed {
+  background-color: #ffffff; /* Clean white background for clarity */
+  border-radius: 10px;       /* Rounded corners for a modern look */
+  padding: 12px;             
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); 
+  margin-top: 12px;         
+}
+
+/* Heading inside the activity feed */
+.activity-feed h3 {
+  font-size: 14px;          
+  font-weight: 600;          
+  color: #374151;            
+  margin-bottom: 6px;        
+}
+
+/* Paragraph text inside the activity feed */
+.activity-feed p {
+  font-size: 12px;          
+  color: #6b7280;           
+  margin-bottom: 12px;       
+}
+
+/* Flex container holding the activity bars chart */
+.activity-chart {
+  display: flex;             /* Use flexbox to align bars horizontally */
+  justify-content: space-between; 
+  height: 40px;             
+  align-items: flex-end;     /* Align bars so they start from bottom */
+}
+
+/* Individual bar container with label */
+.chart-bar {
+  display: flex;             
+  flex-direction: column;
+  align-items: center;      
+  flex: 1;                  
+}
+
+/* The actual vertical bar showing activity height */
+.bar {
+  width: 6px;                
+  border-radius: 2px;        
+  margin-bottom: 4px;        
+}
+
+/* Label text below each bar */
+.chart-bar span {
+  font-size: 10px;           
+  color: #6b7280;            
+}
+
+/* Responsive styles for smaller screen sizes */
+@media (max-width: 768px) {
+  .activity-feed {
+    padding: 8px;      
+    margin-top: 6px;         
+  }
+
+  .activity-chart {
+    height: 30px;            /* Make chart slightly shorter on mobile */
+  }
+
+  .bar {
+    width: 4px;             
+  }
+}

@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e6eef7; /* Light cool blue for subtle calmness */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 16px; /* Adds spacing between sidebar and main */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px; /* Comfortable padding for desktop */
+  background-color: #ffffff; /* Clean white for main content */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Tablet view - stack layout */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+    gap: 12px; /* Slightly reduced spacing */
+  }
+
+  .main-content {
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    gap: 8px; /* Minimal spacing */
+  }
+
+  .main-content {
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: none; /* Remove shadow on small screens for clarity */
+  }
+}
